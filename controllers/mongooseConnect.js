@@ -2,6 +2,8 @@
 
 const mongoose = require('mongoose');
 
+mongoose.set('strictQuery', false);
+
 const MDB_URI =
   'mongodb+srv://sohyun:1236@cluster0.k9iy3rj.mongodb.net/?retryWrites=true&w=majority';
 
