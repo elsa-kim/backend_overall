@@ -1,9 +1,9 @@
 // @ts-check
 
 const express = require('express');
-const { default: mongoose } = require('mongoose');
+// const { default: mongoose } = require('mongoose');
 const db = require('../controllers/mysqlController');
-const mongooseDB = require('../controllers/mongooseConnect');
+const mongooseDB = require('../controllers/mongooseController');
 
 const router = express.Router();
 
@@ -42,7 +42,7 @@ router.post('/login/mongoose', async (req, res) => {
     } else {
       res.status(400);
       res.send(
-        '회원 ID를 찾을 수 없습니다.<br><a href="/">로그린으로 이동</a>',
+        '회원 ID를 찾을 수 없습니다.<br><a href="/">로그인으로 이동</a>',
       );
     }
   } catch (err) {
