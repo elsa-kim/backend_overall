@@ -1,7 +1,6 @@
 //  @ts-check
 const connect = require('./mongooseConnect');
 const User = require('../models/user');
-const mongooseDB = require('../controllers/mongooseConnect');
 
 connect();
 
