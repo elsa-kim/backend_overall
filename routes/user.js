@@ -2,7 +2,7 @@
 
 const express = require('express');
 // const { default: mongoose } = require('mongoose');
-const db = require('../controllers/mysqlController');
+// const db = require('../controllers/mysqlController');
 const mongooseDB = require('../controllers/mongooseController');
 
 const router = express.Router();
@@ -37,7 +37,7 @@ router.post('/login/mongoose', async (req, res) => {
         res.send(`${req.session.userId}님이 로그인 하셨습니다.`);
       } else {
         res.status(400);
-        res.send('비밀번호가 다릅니다.<br><a href="/">로그린으로 이동</a>');
+        res.send('비밀번호가 다릅니다.<br><a href="/">로그인으로 이동</a>');
       }
     } else {
       res.status(400);
@@ -47,7 +47,7 @@ router.post('/login/mongoose', async (req, res) => {
     }
   } catch (err) {
     console.error(err);
-    res.send(`${err} <br><a href="/">로그린으로 이동</a>`);
+    res.send(`${err} <br><a href="/">로그인으로 이동</a>`);
   }
 });
 
